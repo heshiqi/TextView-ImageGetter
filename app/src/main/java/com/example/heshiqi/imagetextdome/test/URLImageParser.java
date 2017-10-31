@@ -50,11 +50,11 @@ public class URLImageParser implements Html.ImageGetter {
     @Override
     public Drawable getDrawable(final String source) {
         final UrlDrawable urlDrawable = new UrlDrawable();
-        ImageLoader.getInstance().loadImage(source, getDisplayImageOptions(R.mipmap.ic_launcher),
+        ImageLoader.getInstance().loadImage(source, getDisplayImageOptions(R.mipmap.logo_default_big),
                 new SimpleImageLoadingListener() {
                     @Override
                     public void onLoadingStarted(String imageUri, View view) {
-                        final Bitmap LoadBitmap= BitmapFactory.decodeResource(mContext.getResources(),R.mipmap.ic_launcher);
+                        final Bitmap LoadBitmap= BitmapFactory.decodeResource(mContext.getResources(),R.mipmap.logo_default_big);
                         displayImage(source,urlDrawable,LoadBitmap);
                     }
 
